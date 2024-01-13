@@ -1,0 +1,15 @@
+{
+  "name": "name-generator",
+  "version": "1.0.0",
+  "description": "Small Program to generate a name",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "name-generator"
+  },
+  "author": "Kalina Warner",
+  "license": "ISC"
+}
