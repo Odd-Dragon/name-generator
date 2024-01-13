@@ -12,5 +12,8 @@
     "url": "git+https://github.com/Odd-Dragon/name-generator"
   },
   "author": "Kalina Warner",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
