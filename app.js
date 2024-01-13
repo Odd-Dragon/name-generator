@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const mainRoutes = require('./routes/mainRoutes');
+const mainRoutes = require('./routes');
 
 app.use('/', mainRoutes);
 
