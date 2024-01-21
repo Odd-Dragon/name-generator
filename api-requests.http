@@ -1,0 +1,18 @@
+### Get All Contacts (localhost)
+GET http://localhost:3000/contacts
+### Get All Contacts (render)
+GET https://contacts-9ytl.onrender.com/contacts
+
+### Get a Specific Contact (localhost)
+GET http://localhost:3000/contacts/65ac1c251592216495904f6e/
+###
+GET http://localhost:3000/contacts/65ac1db71592216495945dbd/
+###
+GET http://localhost:3000/contacts/65ac1e991592216495969c38/
+
+### Get a Specific Contact (render)
+GET https://contacts-9ytl.onrender.com/contacts/65ac1c251592216495904f6e/
+###
+GET https://contacts-9ytl.onrender.com/contacts/65ac1db71592216495945dbd/
+###
+GET https://contacts-9ytl.onrender.com/contacts/65ac1e991592216495969c38/
