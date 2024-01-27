@@ -38,6 +38,53 @@ const contactsMiddleware = {
       res.status(500).send('Internal Server Error');
     }
   },
+
+  create: async (req, res, next) => {
+    try {
+      const newContact = req.body;
+      await mongodb
+        .getDb()
+        .db()
+        .collection('contacts')
+        .insertOne(newContact);
+      res.status(201).json({ id: newContact._id });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Internal Server Error');
+    };
+  },
+
+  update: async (req, res, next) => {
+    try {
+      const contactId = req.params.id;
+      await mongodb
+        .getDb()
+        .db()
+        .collection('contacts')
+        .updateOne({ _id: new ObjectId(contactId) }, { $set: req.body });
+
+      res.sendStatus(204);
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Internal Server Error');
+    };
+  },
+
+  delete: async (req, res, next) => {
+    try {
+      const contactId = req.params.id;
+      await mongodb
+        .getDb()
+        .db()
+        .collection('contacts')
+        .deleteOne({ _id: new ObjectId(contactId) });
+
+      res.sendStatus(200);
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Internal Server Error');
+    };
+  },
 };
 
 module.exports = contactsMiddleware;

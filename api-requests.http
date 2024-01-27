@@ -16,3 +16,18 @@ GET https://contacts-9ytl.onrender.com/contacts/65ac1c251592216495904f6e/
 GET https://contacts-9ytl.onrender.com/contacts/65ac1db71592216495945dbd/
 ###
 GET https://contacts-9ytl.onrender.com/contacts/65ac1e991592216495969c38/
+
+###Create a Contact (localhost)
+POST http://localhost:3000/contacts
+### Create a Contact (render)
+POST https://contacts-9ytl.onrender.com/contacts
+
+### Update a Specific Contact (localhost)
+PUT http://localhost:3000/contacts/65ac1c251592216495904f6e/
+### Update a Specific Contact (render)
+PUT https://contacts-9ytl.onrender.com/contacts/65ac1c251592216495904f6e/
+
+### Get All Contacts (localhost)
+DELETE http://localhost:3000/contacts/(Insert Contact ID)/
+### Get All Contacts (render)
+DELETE https://contacts-9ytl.onrender.com/contacts/(Insert Contact ID)/
