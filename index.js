@@ -14,9 +14,6 @@ app.use(express.json());
 app.use('/', mainRoutes);
 app.use('/contacts', require('./routes/contacts'));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
-/*app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});*/
 
 
 mongodb.initDb((err, mongodb) => {
