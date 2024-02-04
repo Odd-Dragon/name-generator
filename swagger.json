@@ -6,7 +6,7 @@
     "description": ""
   },
   "host": "contacts-9ytl.onrender.com",
-  "basePath": "/",
+  "basePath": "/contacts",
   "schemes": [
     "https"
   ],
