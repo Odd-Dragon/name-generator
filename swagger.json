@@ -132,17 +132,26 @@
     "Contact": {
       "type": "object",
       "properties": {
-        "id": {
+        "_id": {
           "type": "string"
         },
-        "name": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
           "type": "string"
         },
         "email": {
           "type": "string"
+        },
+        "birthday": {
+          "type": "string"
+        },
+        "favoriteColor": {
+          "type": "string"
         }
       },
-      "required": ["name", "email"]
+      "required": ["_id", "firstName", "lastName", "email", "birthday", "favoriteColor"]
     }
   }
 }
