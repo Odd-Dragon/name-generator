@@ -4,8 +4,7 @@ const path = require('path');
 const outputFile = path.resolve(__dirname, 'swagger.json');
 const endpointsFiles = [
   path.resolve(__dirname, 'routes', 'index.js'),
-  path.resolve(__dirname, 'routes', 'contacts.js'),
-  path.resolve(__dirname, 'api-requests.rest'),
+  path.resolve(__dirname, 'routes', 'contacts.js')
 ];
 
 swaggerAutogen(outputFile, endpointsFiles, (err, done) => {
