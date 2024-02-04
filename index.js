@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const mainRoutes = require('./routes');
 const mongodb = require('./db/connect');
@@ -8,6 +9,7 @@ const swaggerFile = require('./swagger.json');
 const port = 3000;
 
 // Middleware and other setup
+app.use(cors());
 app.use(express.json());
 
 // Routes
