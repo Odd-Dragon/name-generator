@@ -3,7 +3,7 @@
   "info": {
     "version": "1.0.0",
     "title": "REST API",
-    "description": ""
+    "description": "API for managing contacts"
   },
   "host": "contacts-9ytl.onrender.com",
   "basePath": "/contacts",
@@ -13,25 +13,44 @@
   "paths": {
     "/": {
       "get": {
-        "description": "",
+        "summary": "Get all contacts",
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Contact"
+              }
+            }
           }
         }
       },
       "post": {
-        "description": "",
+        "summary": "Create a new contact",
+        "parameters": [
+          {
+            "name": "contact",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Contact"
+            }
+          }
+        ],
         "responses": {
-          "default": {
-            "description": ""
+          "201": {
+            "description": "Contact created successfully",
+            "schema": {
+              "$ref": "#/definitions/Contact"
+            }
           }
         }
       }
     },
     "/{id}": {
       "get": {
-        "description": "",
+        "summary": "Get a contact by ID",
         "parameters": [
           {
             "name": "id",
@@ -41,29 +60,43 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/Contact"
+            }
           }
         }
       },
       "put": {
-        "description": "",
+        "summary": "Update a contact by ID",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "contact",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Contact"
+            }
           }
         ],
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "Contact updated successfully",
+            "schema": {
+              "$ref": "#/definitions/Contact"
+            }
           }
         }
       },
       "delete": {
-        "description": "",
+        "summary": "Delete a contact by ID",
         "parameters": [
           {
             "name": "id",
@@ -73,11 +106,37 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": ""
+          "204": {
+            "description": "Contact deleted successfully"
           }
         }
       }
+    }
+  },
+  "definitions": {
+    "Contact": {
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "birthday": {
+          "type": "string"
+        },
+        "favoriteColor": {
+          "type": "string"
+        }
+      },
+      "required": ["firstName", "lastName", "email"]
     }
   }
 }
