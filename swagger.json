@@ -5,7 +5,7 @@
     "title": "REST API",
     "description": ""
   },
-  "host": "https://contacts-9ytl.onrender.com",
+  "host": "contacts-9ytl.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
